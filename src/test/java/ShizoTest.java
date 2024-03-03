@@ -15,6 +15,7 @@ public class ShizoTest {
 
     @BeforeEach
     void init() {
+        System.out.println("SHIZO TEST");
         env = new ArrayList<>();
         arthur = new Arthur();
         ford = new Ford();

@@ -29,11 +29,17 @@ public class TaylorSeries {
     }
 
     public static double sec(double x, int steps){
+        int coefficient = 1;
+        x = Math.abs(x);
+        while (x > Math.PI/2){
+            x -= Math.PI;
+            coefficient *= -1;
+        }
         double result = 0;
         for (int n = 0; n <= steps; n++){
             result += Math.pow(-1, n) * eulerNumber(2 * n) * Math.pow(x, 2 * n) / factorial(2 * n);
         }
-        return result;
+        return result * coefficient;
     }
 
 }

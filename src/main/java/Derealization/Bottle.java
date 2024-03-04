@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Bottle <T> {
     private T content = null;
@@ -15,9 +14,6 @@ public class Bottle <T> {
     }
 
     public T flush() {
-        if (isEmpty()) {
-            throw new RuntimeException("empty flush");
-        }
         T buf = content;
         content = null;
         return buf;

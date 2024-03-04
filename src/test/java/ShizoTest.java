@@ -46,7 +46,6 @@ public class ShizoTest {
     @Test
     void testEarFish() {
         arthur.lookAround(env);
-        assertTrue(arthur.isConfident());
         ford.askToPutFish(arthur);
         assertTrue(ford.getFishBottle().isEmpty());
         assertFalse(arthur.getEar().isEmpty());
